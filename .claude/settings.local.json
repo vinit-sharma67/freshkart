@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(& \"C:\\\\Program Files\\\\WinRAR\\\\UnRAR.exe\" x -y \"C:\\\\Users\\\\Dhruv\\\\Desktop\\\\vegitables\\\\VEGETABLES \\(1\\).rar\" \"C:\\\\Users\\\\Dhruv\\\\Desktop\\\\vegitables\\\\_reference\\\\\" | Select-Object -Last 5)",
+      "PowerShell(npm *)",
+      "PowerShell(python -m pip install --quiet \"Django>=5.0,<5.1\" \"djangorestframework>=3.15\" razorpay)",
+      "PowerShell(Start-Sleep -Seconds 3; $r = Invoke-WebRequest http://localhost:5173/ -UseBasicParsing; \"status: $\\($r.StatusCode\\)\"; $p = Invoke-RestMethod http://localhost:5173/api/vegetables/; \"proxy api ok: $\\($p.vegetables.Count\\) veggies\")",
+      "PowerShell(Start-Sleep 3; $r = Invoke-RestMethod -Method Post http://127.0.0.1:8000/api/chatbot/ -ContentType \"application/json\" -Body '{\"message\":\"how to make palak paneer?\"}'; $r.reply; \"recipe: $\\($r.recipe.name\\), veggies: $\\($r.recipe.veggies.Count\\), steps: $\\($r.recipe.steps.Count\\), pantry: $\\($r.recipe.pantry.Count\\)\"; $r.recipe.veggies | ForEach-Object { \"$\\($_.product.name\\) [$\\($_.weight\\)] available=$\\($_.available\\)\" })",
+      "PowerShell(winget install *)"
+    ]
+  }
+}
